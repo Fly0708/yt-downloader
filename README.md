@@ -6,7 +6,7 @@ Youtube 1080p视频下载，下载之后对所下载的视频文件、音频文�
 
 python >= 3.13
 
-ffmpeg
+ffmpeg （https://www.ffmpeg.org/download.html）
 
 ## Install
 
