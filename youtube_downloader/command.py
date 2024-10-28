@@ -56,10 +56,10 @@ def download(url: str, target_dir: str, target_filename: str = None):
             caption_path = pathlib.Path(target_path).joinpath(f'{target_filename}.srt')
             with open(pathlib.Path(target_path).joinpath(f'{target_filename}.srt'), 'w', encoding='utf-8') as f:
                 f.write(caption.generate_srt_captions())
-                click.secho(f"Downloaded subtitle success!", fg='green')
+                click.secho(f"Downloaded caption success!", fg='green')
                 click.echo(f"\tcaption_path: {caption_path}")
 
-        # merge video、audio and subtitle
+        # merge video、audio and caption
         if caption is not None:
             commands = [r'E:\program\ffmpeg-master-latest-win64-gpl\bin\ffmpeg.exe', '-i',
                         video_path, '-i',
