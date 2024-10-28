@@ -2,19 +2,45 @@
 
 Youtube 1080p视频下载，下载之后对所下载的视频文件、音频文件和字幕进行合并为最终的视频文件。
 
+## PyPi
+
+https://pypi.org/project/youtube-downloader-flysea/
+
 ## Requirement
 
 python >= 3.13
 
 ffmpeg （https://www.ffmpeg.org/download.html）
 
-## Install
 
-git clone git@github.com:Fly0708/yt-downloader.git
 
-poetry install
+## For PyPi
 
-poetry run yt  --url {your youtube video url} --target_dir {your target dir}
+### install
+
+`pip install youtube-downloader-flysea`
+
+### run
+
+`yt  --url {your youtube video url} --target_dir {your target dir}`
+
+or
+
+`yt  -u {your youtube video url} -t {your target dir}`
+
+## For source code
+
+### install
+
+`git clone git@github.com:Fly0708/yt-downloader.git`
+
+`poetry install`
+
+### run
+
+`poetry run yt  --url {your youtube video url} --target_dir {your target dir}`
+
+
 
 ## Help & Demo shortcut
 

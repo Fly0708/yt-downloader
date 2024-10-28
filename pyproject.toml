@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "youtube-downloader-flysea"
-version = "0.1.0"
+version = "0.1.1"
 description = "Download youtube 1080p video with subtitle"
 authors = ["flysea <flysea0708@163.com>"]
 readme = "README.md"

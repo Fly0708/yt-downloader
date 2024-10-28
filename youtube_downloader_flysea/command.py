@@ -8,7 +8,7 @@ import pytubefix
 
 
 # noinspection PyBroadException
-def download(url: str, target_dir: str, target_filename: str = None):
+def download(url: str, target_dir: str, target_filename: str = None, if_merge: bool = False):
     yt = pytubefix.YouTube(url)
     res_137 = [item for item in yt.streams if item.itag == 137]
     res_251 = [item for item in yt.streams if item.itag == 251]
@@ -61,14 +61,14 @@ def download(url: str, target_dir: str, target_filename: str = None):
 
         # merge video、audio and caption
         if caption is not None:
-            commands = [r'E:\program\ffmpeg-master-latest-win64-gpl\bin\ffmpeg.exe', '-i',
+            commands = ['ffmpeg', '-i',
                         video_path, '-i',
                         audio_path, '-i',
                         caption_path, '-c:v', 'copy', '-c:a', 'copy',
                         '-c:s', 'mov_text', '-metadata:s:s:0', 'language=eng', '-disposition:s:0', 'default',
                         target_video_path, '-y']
         else:
-            commands = [r'E:\program\ffmpeg-master-latest-win64-gpl\bin\ffmpeg.exe', '-i',
+            commands = ['ffmpeg', '-i',
                         video_path, '-i',
                         audio_path, '-c:v', 'copy', '-c:a', 'copy',
                         target_video_path, '-y']
