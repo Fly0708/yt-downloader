@@ -1,9 +1,10 @@
 [tool.poetry]
-name = "youtube-downloader"
+name = "youtube-downloader-flysea"
 version = "0.1.0"
 description = "Download youtube 1080p video with subtitle"
 authors = ["flysea <flysea0708@163.com>"]
 readme = "README.md"
+license = "MIT"
 
 [tool.poetry.dependencies]
 python = "3.13"
@@ -16,4 +17,4 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
-yt = "youtube_downloader.__main__:main"
+yt = "youtube_downloader_flysea.__main__:main"

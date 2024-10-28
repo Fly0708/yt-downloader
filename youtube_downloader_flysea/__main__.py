@@ -1,6 +1,7 @@
 import click
 
-import youtube_downloader.command as yt_command
+# import .command as yt_command
+import youtube_downloader_flysea.command as yt_command
 
 
 @click.command('yt')
@@ -13,8 +14,10 @@ def cli(url: str, target_dir: str, target_filename: str = None):
     """
     yt_command.download(url, target_dir, target_filename)
 
+
 def main():
     cli()
+
 
 if __name__ == '__main__':
     cli()
